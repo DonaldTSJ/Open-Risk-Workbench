@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://open-risk-workbench.dev/schemas/audit-review.schema.json",
+  "title": "Audit Review",
+  "type": "object",
+  "required": ["decision", "graphStable", "probeOrderNotional", "finalCapacity", "checks", "disclaimer"],
+  "properties": {
+    "decision": { "enum": ["APPROVE", "REJECT", "BLOCKED"] },
+    "graphStable": { "type": "boolean" },
+    "probeOrderNotional": { "type": "number", "minimum": 0 },
+    "finalCapacity": { "type": "number" },
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "status"],
+        "properties": {
+          "id": { "type": "string" },
+          "status": { "enum": ["PASS", "FAIL", "BLOCKED"] }
+        }
+      }
+    },
+    "disclaimer": { "type": "string", "minLength": 1 }
+  }
+}

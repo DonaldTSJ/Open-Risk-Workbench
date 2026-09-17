@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="An auditable evidence-to-simulation workbench for synthetic trading-risk reviews." />
+    <title>Open Risk Workbench</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav>
+        <a class="brand" href="#top">ORW<span>●</span></a>
+        <div class="nav-links">
+          <a href="#workflow">Workflow</a>
+          <a href="#review">Review</a>
+          <a href="https://github.com/DonaldTSJ/Open-Risk-Workbench">GitHub</a>
+        </div>
+      </nav>
+      <div class="hero-grid" id="top">
+        <div>
+          <p class="eyebrow">Evidence → Context Pack → Replay → Review</p>
+          <h1>Make risk logic<br /><em>inspectable.</em></h1>
+          <p class="lede">
+            A compact, open workbench that keeps documentary evidence, deterministic
+            calculations, constraints, and audit output in one traceable flow.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#review">Run the synthetic review</a>
+            <a class="button ghost" href="./docs/ARCHITECTURE.md">Read the architecture</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="status-line"><span class="pulse"></span> SYNTHETIC MODE</div>
+          <div class="metric"><span>Evidence policy</span><strong>fail closed</strong></div>
+          <div class="metric"><span>Graph policy</span><strong>version locked</strong></div>
+          <div class="metric"><span>Execution</span><strong>deterministic</strong></div>
+          <div class="metric"><span>Production authority</span><strong>none</strong></div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" id="workflow">
+        <div class="section-heading">
+          <p class="eyebrow">One coherent project</p>
+          <h2>Knowledge explains. The engine proves.</h2>
+          <p>Documents never become executable rules by accident. A compiled Context Pack is the seam.</p>
+        </div>
+        <div class="pipeline" id="pipeline"></div>
+      </section>
+
+      <section class="section review-shell" id="review">
+        <div class="section-heading row-heading">
+          <div>
+            <p class="eyebrow">Live synthetic walkthrough</p>
+            <h2>Review an order lifecycle</h2>
+          </div>
+          <div class="step-controls" id="step-controls"></div>
+        </div>
+
+        <div class="review-grid">
+          <article class="panel span-2">
+            <div class="panel-title">
+              <div><span>01</span><h3>Evidence graph</h3></div>
+              <small id="evidence-count"></small>
+            </div>
+            <div class="evidence-grid" id="evidence-grid"></div>
+          </article>
+
+          <article class="panel decision-panel">
+            <div class="panel-title"><div><span>02</span><h3>Audit decision</h3></div></div>
+            <div id="decision"></div>
+          </article>
+
+          <article class="panel span-2">
+            <div class="panel-title">
+              <div><span>03</span><h3>Event → state → output</h3></div>
+              <small id="graph-hash"></small>
+            </div>
+            <div class="timeline" id="timeline"></div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-title"><div><span>04</span><h3>Node trace</h3></div></div>
+            <div class="trace" id="trace"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section principles">
+        <div class="section-heading">
+          <p class="eyebrow">Enterprise-shaped, public-safe</p>
+          <h2>Strong controls without private rules.</h2>
+        </div>
+        <div class="principle-grid">
+          <article><b>01</b><h3>Evidence status</h3><p>Public, synthetic, disputed, or unknown—never silently promoted.</p></article>
+          <article><b>02</b><h3>Stable graphs</h3><p>Before and after snapshots use the same versioned dependency graph.</p></article>
+          <article><b>03</b><h3>Failure semantics</h3><p>Missing inputs, cycles, conflicts, and invalid events stop the review.</p></article>
+          <article><b>04</b><h3>Review output</h3><p>Every result links back to events, nodes, claims, and checks.</p></article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Open Risk Workbench · educational synthetic model · not investment advice</p>
+      <p>MIT licensed</p>
+    </footer>
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+name: Design proposal
+description: Propose a schema, evidence, graph, or review change.
+title: "[proposal] "
+labels: [design]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Which public use case is not supported today?
+    validations:
+      required: true
+  - type: textarea
+    id: provenance
+    attributes:
+      label: Provenance
+      description: Identify public, original, or synthetic sources and licensing.
+    validations:
+      required: true
+  - type: textarea
+    id: interface
+    attributes:
+      label: Interface impact
+      description: Explain why the public interface must change, if at all.

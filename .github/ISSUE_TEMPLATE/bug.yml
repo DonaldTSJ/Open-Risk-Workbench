@@ -1,0 +1,27 @@
+name: Bug report
+description: Report a reproducible problem in the workbench.
+title: "[bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include confidential rules, customer data, credentials, or private documents.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What happened and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal synthetic reproduction
+      description: Provide synthetic inputs, events, and the exact command.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and trace
+      description: Include graph hash, failing check, and node trace where relevant.
