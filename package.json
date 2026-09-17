@@ -1,0 +1,24 @@
+{
+  "name": "open-risk-workbench",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "Evidence-to-simulation workbench for auditable synthetic trading-risk reviews.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DonaldTSJ/Open-Risk-Workbench.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DonaldTSJ/Open-Risk-Workbench/issues"
+  },
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "test": "node --test",
+    "check:sensitive": "node scripts/check-sensitive.mjs",
+    "check": "npm test && npm run check:sensitive"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
